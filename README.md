@@ -30,7 +30,7 @@ Note
 ----
 chmod +x /usr/local/bin/zabbix_mdraid.sh
 chown zabbix:zabbix /usr/local/bin/zabbix_mdraid.sh
-zabbix ALL= (ALL) NOPASSWD: /usr/local/bin/zabbix_mdraid.sh
+zabbix ALL=NOPASSWD:/usr/local/bin/zabbix_mdraid.sh
 
 #### MDRAID
 UserParameter=mdraid[*], sudo /usr/local/bin/zabbix_mdraid.sh -m'$1' -$2'$3'
