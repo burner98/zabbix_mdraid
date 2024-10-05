@@ -28,7 +28,13 @@ Append to zabbix_agentd.conf file
 ```
 Note
 ----
-**don't forget to add zabbix user to sudoers**
+chmod +x /usr/local/bin/zabbix_mdraid.sh
+chown zabbix:zabbix /usr/local/bin/zabbix_mdraid.sh
+zabbix ALL= (ALL) NOPASSWD: /usr/local/bin/zabbix_mdraid.sh
+
+#### MDRAID
+UserParameter=mdraid[*], sudo /usr/local/bin/zabbix_mdraid.sh -m'$1' -$2'$3'
+UserParameter=mdraid.discovery, sudo /usr/local/bin/zabbix_mdraid.sh -D
 
 
 Referrence:
